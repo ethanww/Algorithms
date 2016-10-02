@@ -4,17 +4,33 @@ import java.util.Iterator;
 
 import javax.xml.soap.Node;
 
-public class Bag<Item> implements Iterable<Item> {
-	private class Node {
+
+public class Stack<Item> implements Iterable<Item> {
+	private Node first;
+	private int N;
+	private class Node
+	{//定义结点的嵌套类
 		Item item;
 		Node next;
 	}
-	private Node first;
-	public void add(Item item) {
-		Node oldfirst=first;
-		first=new Node();
+	public boolean isEmpty() {
+		return first ==null;
+	}
+	public int size() {
+		return N;
+	}
+	public void push(Item item) {
+		Node oldfisrt=first;
+		first =new Node();
 		first.item=item;
-		first.next=oldfirst;
+		first.next=oldfisrt;
+		N++;
+	}
+	public Item pop() {
+		Item item =first.item;
+		first=first.next;
+		N--;
+		return item;
 	}
 	@Override
 	public Iterator<Item> iterator() {

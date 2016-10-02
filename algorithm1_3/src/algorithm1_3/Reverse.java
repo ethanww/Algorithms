@@ -11,18 +11,17 @@ public class Reverse {
 		StdOut.println("1");
 		Stack<Integer> stack;
 		stack=new Stack<Integer>();
-		StdOut.println("1");
 		while (!StdIn.isEmpty()) {
 			stack.push(StdIn.readInt());
 		}
-		for (int i : stack) {
-			StdOut.println(i);
-		}
-//		for (int i = 0; i < 5; i++) {
-//			stack.push(i);
-//		}
+		System.out.println(stack.pop());
 //		for (int i : stack) {
 //			StdOut.println(i);
+//		}
+//		stack.push(StdIn.readInt());
+//		stack.push(StdIn.readInt());
+//		for (int i=0 ;i<stack.size();i++) {
+//			StdOut.println(stack.pop());
 //		}
 	}
 }

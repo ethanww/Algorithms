@@ -17,7 +17,7 @@ public class Stats {
 	 * StdOut.printf("Std dev: %.2f\n", std); }
 	 */
        public static void main(String[] args) {
-    	args=new String[]{"100","99","101"};
+
 		Bag<Double> numbers = new Bag<Double>();
 
 		while (!StdIn.isEmpty()) {
